@@ -143,6 +143,12 @@ section { padding: 88px 0; }
   letter-spacing: 1px;
 }
 
+.logo-mark {
+  height: 46px;
+  width: auto;
+  max-height: 46px;
+}
+
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 700;
