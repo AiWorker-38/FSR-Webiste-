@@ -294,53 +294,6 @@ section { padding: 88px 0; }
   margin-bottom: 28px;
 }
 
-.hero-note {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* ============ TRUST BAR ============ */
-.trust-bar {
-  padding: 0;
-  transform: translateY(-40px);
-  margin-bottom: -40px;
-  position: relative;
-  z-index: 2;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.trust-tile {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: 0 14px 34px rgba(5, 42, 68, 0.14);
-  padding: 26px 18px;
-  text-align: center;
-}
-
-.trust-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.8rem;
-  color: var(--blue);
-  text-transform: uppercase;
-}
-
-.trust-label {
-  display: block;
-  font-size: 0.92rem;
-  color: var(--text-gray);
-  font-weight: 600;
-  margin-top: 4px;
-}
-
 /* ============ SECTION HEADINGS ============ */
 .section-eyebrow {
   font-family: var(--font-heading);
@@ -361,9 +314,52 @@ section { padding: 88px 0; }
 }
 .section-title.light { color: var(--white); }
 
-/* ============ ANGEBOTE ============ */
-.angebote { padding-top: 130px; }
+/* ============ WARUM FSR ============ */
+.warum-fsr { background: #F4F8FB; }
 
+.warum-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.warum-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(5, 42, 68, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.warum-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(5, 42, 68, 0.13);
+}
+
+.warum-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(11, 114, 181, 0.1);
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.warum-card h3 {
+  font-size: 1.2rem;
+  color: var(--blue-darker);
+  margin-bottom: 8px;
+}
+
+.warum-card p {
+  color: var(--text-gray);
+  font-size: 0.92rem;
+}
+
+/* ============ ANGEBOTE ============ */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -454,83 +450,6 @@ section { padding: 88px 0; }
   background: var(--yellow);
   color: var(--blue-darker);
   border-color: var(--yellow);
-}
-
-/* ============ ALLES DABEI ============ */
-.alles-dabei { background: #F4F8FB; }
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 50px;
-}
-
-.feature-tile {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 30px 26px;
-  box-shadow: 0 8px 22px rgba(5, 42, 68, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.feature-tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(5, 42, 68, 0.13);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 14px;
-}
-
-.feature-tile h3 {
-  font-size: 1.25rem;
-  color: var(--blue-darker);
-  margin-bottom: 8px;
-}
-
-.feature-tile p {
-  color: var(--text-gray);
-  font-size: 0.95rem;
-}
-
-.center-cta { text-align: center; }
-
-/* ============ GALERIE ============ */
-.galerie-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.galerie-tile {
-  position: relative;
-  height: 200px;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-darker) 100%);
-  overflow: hidden;
-}
-.galerie-tile::before {
-  content: "⚽";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.4rem;
-  opacity: 0.25;
-}
-.galerie-tile::after {
-  content: attr(data-label);
-  position: absolute;
-  bottom: 14px;
-  left: 16px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--white);
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
 }
 
 /* ============ TESTIMONIALS ============ */
@@ -658,8 +577,7 @@ section { padding: 88px 0; }
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .card-grid,
-  .feature-grid,
-  .galerie-grid,
+  .warum-grid,
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -670,14 +588,11 @@ section { padding: 88px 0; }
 
 @media (max-width: 768px) {
   section { padding: 64px 0; }
-  .angebote { padding-top: 90px; }
 
   .main-nav { display: none; }
   .header-actions .btn-small { display: none; }
   .burger { display: flex; }
   .mobile-nav { display: block; }
-
-  .trust-grid { grid-template-columns: repeat(2, 1fr); }
 
   .hero { padding: 90px 0 76px; }
   .hero-buttons { flex-direction: column; align-items: center; }
@@ -686,12 +601,10 @@ section { padding: 88px 0; }
 
 @media (max-width: 560px) {
   .card-grid,
-  .feature-grid,
-  .galerie-grid,
+  .warum-grid,
   .testimonial-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
-  .trust-grid { grid-template-columns: 1fr 1fr; }
   .logo-text { display: none; }
 }
