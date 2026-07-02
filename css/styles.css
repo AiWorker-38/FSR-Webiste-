@@ -128,25 +128,11 @@ section { padding: 88px 0; }
   gap: 12px;
 }
 
-.logo-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  border-radius: var(--radius-sm);
-  background: var(--blue);
-  color: var(--white);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 1px;
-}
-
 .logo-mark {
   height: 46px;
   width: auto;
   max-height: 46px;
+  border-radius: var(--radius-sm);
 }
 
 .logo-text {
@@ -261,6 +247,19 @@ section { padding: 88px 0; }
 .hero-stripes span:nth-child(3) { left: 55%; opacity: 0.16; }
 .hero-stripes span:nth-child(4) { left: 74%; opacity: 0.08; width: 50px; }
 .hero-stripes span:nth-child(5) { left: 90%; opacity: 0.14; }
+
+.hero-watermark {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 4%;
+  height: 60%;
+  width: auto;
+  transform: translateY(-50%);
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+}
 
 .hero-inner {
   position: relative;
@@ -512,8 +511,15 @@ section { padding: 88px 0; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.footer-logo {
+  height: 90px;
+  width: auto;
+  border-radius: var(--radius);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25));
+}
+
 .footer-brand p {
-  margin-top: 16px;
+  margin-top: 18px;
   font-size: 0.92rem;
   color: rgba(255, 255, 255, 0.65);
   max-width: 260px;
@@ -574,6 +580,9 @@ section { padding: 88px 0; }
   .hero { padding: 90px 0 76px; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-buttons .btn { width: 100%; max-width: 320px; }
+  .hero-watermark { display: none; }
+
+  .footer-logo { height: 70px; }
 }
 
 @media (max-width: 560px) {
