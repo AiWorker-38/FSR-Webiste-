@@ -38,3 +38,40 @@ if ('IntersectionObserver' in window) {
 } else {
   revealEls.forEach((el) => el.classList.add('in-view'));
 }
+
+// Anmeldung form submission (Web3Forms)
+const anmeldungForm = document.getElementById('anmeldung-form');
+const formStatus = document.getElementById('form-status');
+
+if (anmeldungForm && formStatus) {
+  anmeldungForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitBtn = anmeldungForm.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    formStatus.className = 'form-status';
+    formStatus.textContent = 'Wird gesendet …';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(anmeldungForm),
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Vielen Dank! Deine Anmeldung ist eingegangen – wir melden uns schnellstmöglich.';
+        anmeldungForm.reset();
+      } else {
+        throw new Error(result.message || 'Unbekannter Fehler');
+      }
+    } catch (err) {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = 'Etwas ist schiefgelaufen. Bitte versuche es erneut oder ruf uns direkt an: 0170-4707757.';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
