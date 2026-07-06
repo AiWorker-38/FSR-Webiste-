@@ -3,181 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anmeldung | Fußballschule Renchtal</title>
-<meta name="description" content="Melde dein Kind bei der Fußballschule Renchtal an – für Feriencamp, Talent-Training oder Individualtraining.">
+<title>Anmeldung – FSR Fußballschule Renchtal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0B72B5;--deep:#073B5E;--ink:#052A44;--yel:#FFDD00;--txt:#1A2530;--grey:#5A6B78;--line:#E4EBF0;--wash:#F4F8FB;--r:18px;--sh:0 12px 34px rgba(7,59,94,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--txt);background:var(--wash);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;line-height:1}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1180px;margin:0 auto;padding:0 22px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:46px}
+.brand span{font-family:'Barlow Condensed';font-weight:800;font-size:1.2rem;color:var(--ink);text-transform:uppercase;line-height:.95}
+.back{font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--blue)}
+.hero{background:linear-gradient(150deg,var(--blue),var(--deep));color:#fff;padding:52px 0 66px;text-align:center}
+.hero h1{font-size:clamp(2.2rem,8vw,3.4rem)}
+.hero p{margin-top:10px;color:rgba(255,255,255,.85);max-width:46ch;margin-left:auto;margin-right:auto}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:30px 24px;margin:-34px auto 60px;position:relative}
+@media(min-width:600px){.card{padding:40px}}
+label{display:block;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;color:var(--ink);margin:18px 0 6px}
+label .opt{color:var(--grey);font-family:'Barlow';font-weight:500;text-transform:none;letter-spacing:0;font-size:.82rem}
+input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:1rem;background:#fff;transition:border .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+textarea{min-height:110px;resize:vertical}
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:22px;background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:14px}
+.check input{width:20px;height:20px;margin-top:2px;flex:none}
+.check span{font-size:.92rem;color:var(--grey)}
+.check a{color:var(--blue);font-weight:600;text-decoration:underline}
+.btn{display:block;width:100%;margin-top:26px;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:1.2rem;padding:17px;border-radius:100px;border:0;cursor:pointer;background:var(--yel);color:var(--ink);box-shadow:0 8px 20px rgba(245,196,0,.4);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.msg{display:none;margin-top:20px;padding:16px;border-radius:12px;font-weight:600;text-align:center}
+.msg.ok{display:block;background:#E4F5E9;color:#186A3B;border:1px solid #BFE8CC}
+.msg.err{display:block;background:#FDEBEC;color:#9B1C24;border:1px solid #F5C6CA}
+footer{background:var(--ink);color:rgba(255,255,255,.6);text-align:center;padding:26px 0;font-size:.85rem}
+footer nav{display:flex;gap:16px;justify-content:center;margin-top:8px}
+footer a{color:rgba(255,255,255,.8)}
+footer a:hover{color:var(--yel)}
+</style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo" aria-label="FSR Fußballschule Renchtal - Startseite">
-      <img src="fsr-logo.png" alt="FSR Fußballschule Renchtal Logo" class="logo-mark">
-      <span class="logo-text">Fußballschule<br>Renchtal</span>
-    </a>
-
-    <nav class="main-nav" id="main-nav">
-      <ul>
-        <li><a href="index.html#warum-fsr">Warum FSR</a></li>
-        <li><a href="index.html#angebote">Angebote</a></li>
-        <li><a href="index.html#camps">Camps</a></li>
-        <li><a href="index.html#das-sind-wir">Das sind wir</a></li>
-        <li><a href="anmeldung.html" class="active">Anmeldung</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <a href="anmeldung.html" class="btn btn-yellow btn-small">Camp buchen</a>
-      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="fsr-logo.png" alt="FSR" onerror="this.style.display='none'"><span>Fußballschule Renchtal</span></a>
+    <a href="index.html" class="back">‹ Zur Startseite</a>
   </div>
-
-  <!-- Mobile nav -->
-  <nav class="mobile-nav" id="mobile-nav">
-    <ul>
-      <li><a href="index.html#warum-fsr">Warum FSR</a></li>
-      <li><a href="index.html#angebote">Angebote</a></li>
-      <li><a href="index.html#camps">Camps</a></li>
-      <li><a href="index.html#das-sind-wir">Das sind wir</a></li>
-      <li><a href="anmeldung.html" class="active">Anmeldung</a></li>
-      <li><a href="index.html#kontakt">Kontakt</a></li>
-      <li><a href="anmeldung.html" class="btn btn-yellow">Camp buchen</a></li>
-    </ul>
-  </nav>
 </header>
 
-<main>
-
-  <!-- ================= PAGE HERO ================= -->
-  <section class="page-hero">
-    <div class="hero-stripes" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <div class="container page-hero-inner">
-      <p class="eyebrow reveal">FSR · Fußballschule Renchtal</p>
-      <h1 class="page-hero-title reveal">Anmeldung</h1>
-      <p class="page-hero-subtitle reveal">Melde dein Kind in wenigen Schritten für Feriencamp, Talent-Training
-        oder Individualtraining an – wir melden uns schnellstmöglich zurück.</p>
-    </div>
-  </section>
-
-  <!-- ================= FORM ================= -->
-  <section class="anmeldung-form-section">
-    <div class="container form-container">
-      <form class="anmeldung-form reveal" id="anmeldung-form">
-        <input type="hidden" name="access_key" value="a92add17-c35f-4efa-8a17-ac4742223df3">
-        <input type="hidden" name="subject" value="Neue Anmeldung – Fußballschule Renchtal">
-
-        <div class="form-row">
-          <label for="angebot">Angebot auswählen *</label>
-          <select id="angebot" name="Angebot" required>
-            <option value="" disabled selected>Bitte wählen</option>
-            <option value="Feriencamp">Feriencamp</option>
-            <option value="Talent-Training">Talent-Training</option>
-            <option value="Individualtraining">Individualtraining</option>
-          </select>
-        </div>
-
-        <div class="form-grid">
-          <div class="form-row">
-            <label for="kind-name">Vor- und Nachname des Kindes *</label>
-            <input type="text" id="kind-name" name="Name des Kindes" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label for="geburtsdatum">Geburtsdatum *</label>
-            <input type="date" id="geburtsdatum" name="Geburtsdatum" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="verein">Aktueller Verein (optional)</label>
-          <input type="text" id="verein" name="Aktueller Verein">
-        </div>
-
-        <div class="form-grid">
-          <div class="form-row">
-            <label for="erziehungsberechtigter">Name Erziehungsberechtigte/r *</label>
-            <input type="text" id="erziehungsberechtigter" name="Erziehungsberechtigte/r" required autocomplete="name">
-          </div>
-          <div class="form-row">
-            <label for="email">E-Mail *</label>
-            <input type="email" id="email" name="E-Mail" required autocomplete="email">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <label for="telefon">Telefonnummer *</label>
-          <input type="tel" id="telefon" name="Telefonnummer" required autocomplete="tel">
-        </div>
-
-        <div class="form-row">
-          <label for="nachricht">Nachricht/Anmerkungen (optional)</label>
-          <textarea id="nachricht" name="Nachricht" rows="4"></textarea>
-        </div>
-
-        <div class="form-checkbox-row">
-          <input type="checkbox" id="agb-check" name="AGB akzeptiert" required>
-          <label for="agb-check">Ich akzeptiere die <a href="agb.html" target="_blank" rel="noopener">AGB</a>
-            und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>. *</label>
-        </div>
-
-        <button type="submit" class="btn btn-yellow btn-large form-submit">Anmeldung absenden</button>
-
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer" id="kontakt">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="fsr-logo.png" alt="FSR Fußballschule Renchtal Logo" class="footer-logo">
-      <p>Fußballschule Renchtal – Fußball erleben, besser werden, Freunde finden.</p>
-    </div>
-
-    <div class="footer-col">
-      <h3>Kontakt</h3>
-      <ul>
-        <li><a href="tel:+491704707757">📞 0170&nbsp;470&nbsp;77&nbsp;57</a></li>
-        <li><a href="mailto:info@fussballschule-renchtal.com">✉️ info@fussballschule-renchtal.com</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Seiten</h3>
-      <ul>
-        <li><a href="index.html#warum-fsr">Warum FSR</a></li>
-        <li><a href="index.html#angebote">Angebote</a></li>
-        <li><a href="index.html#camps">Camps</a></li>
-        <li><a href="index.html#das-sind-wir">Das sind wir</a></li>
-        <li><a href="anmeldung.html" class="active">Anmeldung</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Rechtliches</h3>
-      <ul>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-        <li><a href="agb.html">AGB</a></li>
-      </ul>
-    </div>
+<div class="hero">
+  <div class="wrap">
+    <h1>Anmeldung</h1>
+    <p>Melde dein Kind für ein Angebot der FSR an – wir melden uns schnellstmöglich zurück.</p>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Fußballschule Renchtal. Alle Rechte vorbehalten.</p>
-  </div>
+</div>
+
+<div class="wrap">
+  <form class="card" id="f" novalidate>
+    <label for="angebot">Angebot *</label>
+    <select id="angebot" name="Angebot" required>
+      <option value="">Bitte wählen…</option>
+      <option>Feriencamp</option>
+      <option>Talent-Training</option>
+      <option>Individualtraining</option>
+    </select>
+
+    <label for="kind">Vor- und Nachname des Kindes *</label>
+    <input id="kind" name="Kind" type="text" required autocomplete="name">
+
+    <label for="geb">Geburtsdatum des Kindes *</label>
+    <input id="geb" name="Geburtsdatum" type="date" required>
+
+    <label for="verein">Aktueller Verein <span class="opt">(optional)</span></label>
+    <input id="verein" name="Verein" type="text">
+
+    <label for="eltern">Name Erziehungsberechtigte/r *</label>
+    <input id="eltern" name="Erziehungsberechtigte" type="text" required>
+
+    <label for="mail">E-Mail *</label>
+    <input id="mail" name="email" type="email" required autocomplete="email">
+
+    <label for="tel">Telefonnummer *</label>
+    <input id="tel" name="Telefon" type="tel" required autocomplete="tel">
+
+    <label for="msg">Nachricht / Anmerkungen <span class="opt">(optional)</span></label>
+    <textarea id="msg" name="Nachricht"></textarea>
+
+    <div class="check">
+      <input type="checkbox" id="agb" required>
+      <span>Ich akzeptiere die <a href="agb.html" target="_blank">AGB</a> und die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>. *</span>
+    </div>
+
+    <button class="btn" id="sub" type="submit">Anmeldung absenden</button>
+    <div class="msg" id="out"></div>
+  </form>
+</div>
+
+<footer>
+  <div>© 2026 FSR Fußballschule Renchtal · <a href="tel:01704707757">0170 – 470 77 57</a></div>
+  <nav><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></nav>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+const f=document.getElementById('f'),out=document.getElementById('out'),sub=document.getElementById('sub');
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  out.className='msg';
+  if(!f.checkValidity()){f.reportValidity();return}
+  sub.disabled=true;sub.textContent='Wird gesendet…';
+  const data=new FormData(f);
+  data.append('access_key','a92add17-c35f-4efa-8a17-ac4742223df3');
+  data.append('subject','Neue FSR-Anmeldung: '+data.get('Angebot'));
+  data.append('from_name','FSR Website Anmeldung');
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:data});
+    const j=await r.json();
+    if(j.success){
+      out.textContent='Vielen Dank! Deine Anmeldung ist eingegangen – wir melden uns schnellstmöglich.';
+      out.className='msg ok';f.reset();
+    }else{throw 0}
+  }catch(_){
+    out.textContent='Ups, das hat nicht geklappt. Bitte versuche es erneut oder ruf uns an: 0170 – 470 77 57.';
+    out.className='msg err';
+  }
+  sub.disabled=false;sub.textContent='Anmeldung absenden';
+});
+</script>
 </body>
 </html>

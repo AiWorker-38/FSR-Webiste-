@@ -3,228 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fußballschule Renchtal | Wir machen aus Talenten bessere Fußballer</title>
-<meta name="description" content="FSR – Fußballschule Renchtal: Feriencamps, Talent-Training und Individualtraining mit lizenzierten Trainern. Seit 2012 entwickeln wir jedes Kind individuell.">
+<title>FSR Fußballschule Renchtal – Spaß & Leistung seit 2012</title>
+<meta name="description" content="Feriencamps, Talent-Training und Individualtraining im Renchtal. Seit 2012. Lizenzierte Trainer. Jeder wird entwickelt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0B72B5;--deep:#073B5E;--ink:#052A44;--yel:#FFDD00;--yeld:#F5C400;--txt:#1A2530;--grey:#5A6B78;--line:#E4EBF0;--wash:#F4F8FB;--r:18px;--sh:0 12px 34px rgba(7,59,94,.12);--shl:0 26px 60px rgba(7,59,94,.2)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--txt);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:.98;text-transform:uppercase;letter-spacing:.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;color:var(--blue)}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;padding:15px 30px;border-radius:100px;cursor:pointer;border:2px solid transparent;transition:.2s}
+.btn-y{background:var(--yel);color:var(--ink);box-shadow:0 8px 20px rgba(245,196,0,.35)}
+.btn-y:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,196,0,.5)}
+.btn-g{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-g:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-b{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(11,114,181,.3)}
+.btn-b:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(11,114,181,.45)}
+/* Header */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:46px;width:auto}
+.brand span{font-family:'Barlow Condensed';font-weight:800;font-size:1.25rem;color:var(--ink);text-transform:uppercase;line-height:.95}
+.brand small{display:block;font-family:'Barlow';font-weight:600;font-size:.6rem;letter-spacing:.16em;color:var(--grey)}
+.menu{display:none;gap:26px;align-items:center}
+.menu a{font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;color:var(--ink);transition:color .15s}
+.menu a:hover{color:var(--blue)}
+.nav-cta{display:none}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.25s}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.mmenu{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:8px 22px 20px}
+.mmenu.show{display:flex}
+.mmenu a{padding:13px 0;border-bottom:1px solid var(--line);font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:1.1rem;color:var(--ink)}
+.mmenu .btn{margin-top:16px;justify-content:center}
+@media(min-width:960px){.menu{display:flex}.nav-cta{display:inline-flex}.burger{display:none}}
+/* Hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 85% 8%,#1287cf 0%,transparent 55%),radial-gradient(110% 130% at 0% 100%,#0a5f98 0%,transparent 60%),linear-gradient(160deg,var(--blue) 0%,var(--deep) 100%);color:#fff;padding:78px 0 150px;overflow:hidden}
+.hero .wrap{position:relative;z-index:3}
+.hero .eyebrow{color:var(--yel)}
+.hero h1{font-size:clamp(2.8rem,10vw,5.4rem);margin:.32em 0 .3em;max-width:13ch}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p.lead{font-size:clamp(1.05rem,4vw,1.3rem);max-width:50ch;color:rgba(255,255,255,.92);font-weight:500}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-note{margin-top:22px;font-size:.9rem;color:rgba(255,255,255,.72)}
+.hero-note b{color:var(--yel)}
+.fx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.lion{position:absolute;right:-50px;bottom:-36px;width:min(44%,430px);filter:drop-shadow(0 22px 44px rgba(0,0,0,.4));animation:breath 5s ease-in-out infinite;transform-origin:bottom right}
+.ball{position:absolute;right:36%;top:16%;width:clamp(64px,10vw,120px);filter:drop-shadow(0 12px 20px rgba(0,0,0,.35));animation:fly 5.5s ease-in-out infinite}
+.st{position:absolute;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,rgba(255,221,0,.85))}
+.s1{right:41%;top:26%;width:200px;transform:rotate(26deg);animation:zip 5.5s ease-in-out infinite}
+.s2{right:43%;top:31%;width:140px;opacity:.6;transform:rotate(26deg);animation:zip 5.5s ease-in-out infinite .18s}
+.s3{right:40%;top:22%;width:110px;opacity:.4;transform:rotate(26deg);animation:zip 5.5s ease-in-out infinite .34s}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-16px,-20px) rotate(-14deg)}}
+@keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+@keyframes zip{0%,100%{opacity:0;transform:translateX(24px) rotate(26deg)}50%{opacity:1;transform:translateX(0) rotate(26deg)}}
+@media(max-width:760px){.lion{width:60%;right:-36px;bottom:-24px;opacity:.55}.ball{right:6%;top:6%;width:76px}.st{display:none}}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:64px;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%);z-index:2}
+/* Ticker */
+.ticker{background:var(--ink);color:#fff;overflow:hidden;padding:13px 0;border-bottom:4px solid var(--yel)}
+.tk{display:flex;gap:48px;white-space:nowrap;animation:scroll 26s linear infinite;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:1rem}
+.tk span{display:flex;align-items:center;gap:14px}
+.tk i{width:8px;height:8px;border-radius:50%;background:var(--yel);flex:none}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* Sections */
+section{padding:70px 0}
+.shead{max-width:62ch;margin-bottom:38px}
+.shead h2{font-size:clamp(2rem,7vw,3.2rem);color:var(--ink);margin:.22em 0 .35em}
+.shead p{color:var(--grey);font-size:1.05rem}
+/* Warum */
+.wgrid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:640px){.wgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.wgrid{grid-template-columns:repeat(4,1fr)}}
+.wcard{background:var(--wash);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;transition:.22s;position:relative;overflow:hidden}
+.wcard:hover{transform:translateY(-6px);box-shadow:var(--shl);border-color:transparent}
+.wcard .num{position:absolute;top:-14px;right:6px;font-family:'Barlow Condensed';font-weight:800;font-size:5.2rem;color:rgba(11,114,181,.07);line-height:1}
+.wcard .ic{width:52px;height:52px;border-radius:14px;background:var(--blue);color:var(--yel);display:grid;place-items:center;margin-bottom:16px;font-family:'Barlow Condensed';font-weight:800;font-size:1.4rem}
+.wcard h3{font-size:1.4rem;color:var(--ink);margin-bottom:8px}
+.wcard p{color:var(--grey);font-size:.95rem}
+/* Angebote */
+.angebote{background:var(--wash)}
+.cards{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.22s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shl);border-color:transparent}
+.ph{aspect-ratio:16/11;position:relative;display:grid;place-items:center;color:rgba(255,255,255,.85);background:linear-gradient(135deg,var(--blue),var(--deep))}
+.ph.a{background:linear-gradient(135deg,#12A0E6,var(--blue))}
+.ph.b{background:linear-gradient(135deg,var(--deep),var(--ink))}
+.ph span{font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px dashed rgba(255,255,255,.4);padding:6px 12px;border-radius:8px}
+.tag{position:absolute;top:14px;left:14px;background:var(--yel);color:var(--ink);font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding:4px 10px;border-radius:100px}
+.cbody{padding:24px;display:flex;flex-direction:column;flex:1}
+.cbody h3{font-size:1.5rem;color:var(--ink);margin-bottom:10px}
+.cbody p{color:var(--grey);font-size:.96rem;flex:1}
+.cbody .btn{margin-top:18px;align-self:flex-start;font-size:.95rem;padding:12px 24px}
+/* Das sind wir */
+.about{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:860px){.about{grid-template-columns:1fr 1fr}}
+.aph{aspect-ratio:4/3;border-radius:var(--r);background:linear-gradient(135deg,var(--wash),#E8F1F7);border:2px dashed var(--line);display:grid;place-items:center;color:var(--grey);font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.about h2{font-size:clamp(2rem,6vw,3rem);color:var(--ink);margin:.2em 0 .4em}
+.about p{color:var(--grey);margin-bottom:14px}
+.about .btn{margin-top:10px}
+/* CTA */
+.band{background:linear-gradient(135deg,var(--yel),var(--yeld));color:var(--ink);text-align:center;position:relative;overflow:hidden}
+.band h2{font-size:clamp(2.1rem,7vw,3.4rem);margin-bottom:14px}
+.band p{font-size:1.1rem;max-width:44ch;margin:0 auto 28px;font-weight:500}
+/* Footer */
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding:60px 0 30px}
+.fgrid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:780px){.fgrid{grid-template-columns:2fr 1fr 1fr}}
+.fbrand img{height:90px;width:auto;margin-bottom:14px}
+.fbrand p{font-size:.92rem;max-width:36ch;color:rgba(255,255,255,.6)}
+footer h5{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;font-size:1rem;margin-bottom:14px}
+footer ul{list-style:none}footer li{margin-bottom:9px;font-size:.94rem}
+footer a:hover{color:var(--yel)}
+.fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;font-size:.82rem;color:rgba(255,255,255,.5);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.fbot nav{display:flex;gap:16px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.ball,.lion,.st,.tk{animation:none}}
+</style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="FSR Fußballschule Renchtal - Startseite">
-      <img src="fsr-logo.png" alt="FSR Fußballschule Renchtal Logo" class="logo-mark">
-      <span class="logo-text">Fußballschule<br>Renchtal</span>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="fsr-logo.png" alt="FSR Logo" onerror="this.style.display='none'">
+      <span>Fußballschule<small>Renchtal</small></span>
     </a>
-
-    <nav class="main-nav" id="main-nav">
-      <ul>
-        <li><a href="#warum-fsr">Warum FSR</a></li>
-        <li><a href="#angebote">Angebote</a></li>
-        <li><a href="#camps">Camps</a></li>
-        <li><a href="#das-sind-wir">Das sind wir</a></li>
-        <li><a href="anmeldung.html">Anmeldung</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
+    <nav class="menu">
+      <a href="#warum">Warum FSR</a>
+      <a href="#angebote">Angebote</a>
+      <a href="#wir">Das sind wir</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
-
-    <div class="header-actions">
-      <a href="anmeldung.html" class="btn btn-yellow btn-small">Camp buchen</a>
-      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a href="anmeldung.html" class="btn btn-y nav-cta">Jetzt anmelden</a>
+    <button class="burger" id="bg" aria-label="Menü"><span></span><span></span><span></span></button>
   </div>
-
-  <!-- Mobile nav -->
-  <nav class="mobile-nav" id="mobile-nav">
-    <ul>
-      <li><a href="#warum-fsr">Warum FSR</a></li>
-      <li><a href="#angebote">Angebote</a></li>
-      <li><a href="#camps">Camps</a></li>
-      <li><a href="#das-sind-wir">Das sind wir</a></li>
-      <li><a href="anmeldung.html">Anmeldung</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="anmeldung.html" class="btn btn-yellow">Camp buchen</a></li>
-    </ul>
-  </nav>
+  <div class="mmenu" id="mm">
+    <a href="#warum">Warum FSR</a>
+    <a href="#angebote">Angebote</a>
+    <a href="#wir">Das sind wir</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="anmeldung.html" class="btn btn-y">Jetzt anmelden</a>
+  </div>
 </header>
 
-<main id="top">
-
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-stripes" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
+<section class="hero">
+  <div class="fx" aria-hidden="true">
+    <span class="st s1"></span><span class="st s2"></span><span class="st s3"></span>
+    <img class="ball" src="fsr-ball.png" alt="" onerror="this.style.display='none'">
+    <img class="lion" src="fsr-loewe.png" alt="" onerror="this.style.display='none'">
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">FSR · Deine Fußballschule im Renchtal</p>
+    <h1>Wir machen aus <em>Talenten</em> bessere Fußballer.</h1>
+    <p class="lead">Seit 2012 fördern wir Kinder und Jugendliche mit lizenzierten Trainern – mit ganz viel Spaß und echter Leistungssteigerung. Bei uns wird jeder gesehen und individuell entwickelt.</p>
+    <div class="hero-cta">
+      <a href="anmeldung.html" class="btn btn-y">Jetzt anmelden ›</a>
+      <a href="#angebote" class="btn btn-g">Unsere Angebote</a>
     </div>
-    <div class="hero-kick-scene" aria-hidden="true">
-      <span class="hero-streak hero-streak-1"></span>
-      <span class="hero-streak hero-streak-2"></span>
-      <span class="hero-streak hero-streak-3"></span>
-      <img src="fsr-ball.png" alt="" class="hero-ball">
-      <img src="fsr-loewe.png" alt="" class="hero-lion">
+    <p class="hero-note"><b>★</b> Offizieller Partnerverein der TSG Akademie</p>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="tk">
+    <span><i></i>Spaß & Leistung</span><span><i></i>Seit 2012</span><span><i></i>Lizenzierte Trainer</span><span><i></i>Jeder wird entwickelt</span><span><i></i>Camps · Talent-Training · Individualtraining</span>
+    <span><i></i>Spaß & Leistung</span><span><i></i>Seit 2012</span><span><i></i>Lizenzierte Trainer</span><span><i></i>Jeder wird entwickelt</span><span><i></i>Camps · Talent-Training · Individualtraining</span>
+  </div>
+</div>
+
+<section id="warum">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">Warum FSR</p>
+      <h2>Darum kommst du zu uns</h2>
+      <p>Wir verbinden, was zusammengehört: die Freude am Spiel und echte fußballerische Entwicklung.</p>
     </div>
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">FSR · Fußballschule Renchtal</p>
-      <h1 class="hero-title reveal">Wir machen aus <span class="text-yellow">Talenten</span> bessere Fußballer.</h1>
-      <p class="hero-subtitle reveal">Seit 2012 · lizenzierte Trainer · Spaß und echte Leistungssteigerung –
-        bei uns wird jedes Kind individuell entwickelt.</p>
-      <div class="hero-buttons reveal">
-        <a href="#warum-fsr" class="btn btn-yellow btn-large">Warum FSR?</a>
-        <a href="#angebote" class="btn btn-outline btn-large">Unsere Angebote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= WARUM FSR ================= -->
-  <section class="warum-fsr" id="warum-fsr">
-    <div class="container">
-      <p class="section-eyebrow reveal">Warum FSR</p>
-      <h2 class="section-title reveal">Darum kommst du zu uns</h2>
-
-      <div class="warum-grid">
-        <div class="warum-card reveal">
-          <div class="warum-icon">⚽</div>
-          <h3>Spaß &amp; Leistung</h3>
-          <p>Wir verbinden echte Trainingsqualität mit jeder Menge Spaß am Ball.</p>
-        </div>
-        <div class="warum-card reveal">
-          <div class="warum-icon">📅</div>
-          <h3>Seit 2012</h3>
-          <p>Über ein Jahrzehnt Erfahrung in der Ausbildung junger Fußballtalente.</p>
-        </div>
-        <div class="warum-card reveal">
-          <div class="warum-icon">🎓</div>
-          <h3>Lizenzierte Trainer</h3>
-          <p>Unser Trainerteam ist lizenziert und bildet sich stetig weiter.</p>
-        </div>
-        <div class="warum-card reveal">
-          <div class="warum-icon">📈</div>
-          <h3>Jeder wird entwickelt</h3>
-          <p>Individuelle Förderung für jedes Kind – auf seinem eigenen Level.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ANGEBOTE ================= -->
-  <section class="angebote" id="angebote">
-    <div class="container">
-      <p class="section-eyebrow reveal">Unsere Angebote</p>
-      <h2 class="section-title reveal">Für jedes Kind das passende Training</h2>
-
-      <div class="card-grid">
-        <article class="card reveal" id="camps">
-          <div class="card-photo" data-label="Feriencamp">
-            <svg viewBox="0 0 24 24"><path d="M12 2 2 8.5 12 15l10-6.5L12 2Zm0 8-8-5v9l8 5 8-5v-9l-8 5Z"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Feriencamps</h3>
-            <p>3 Tage geballter Fußballspaß in den Ferien – Training, Turniere und Action für Kids von 6 bis 15 Jahren.</p>
-            <a href="anmeldung.html" class="btn btn-blue">Camp entdecken</a>
-          </div>
-        </article>
-
-        <article class="card reveal" id="talenttraining">
-          <div class="card-photo" data-label="Talent-Training">
-            <svg viewBox="0 0 24 24"><path d="M12 2 1 21h22L12 2Zm0 4.5 6.9 12H5.1L12 6.5Z"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Talent-Training</h3>
-            <p>Wöchentliches Training in der Gruppe für ambitionierte Nachwuchskicker mit Fokus auf Technik, Taktik und Persönlichkeit.</p>
-            <a href="anmeldung.html" class="btn btn-blue">Jetzt informieren</a>
-          </div>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-photo" data-label="Individualtraining">
-            <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4Z"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>Individualtraining</h3>
-            <p>1:1 oder in der Kleingruppe mit max. 4 Kindern – maximale Aufmerksamkeit für die individuelle Entwicklung.</p>
-            <a href="anmeldung.html" class="btn btn-blue">Mehr erfahren</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= DAS SIND WIR ================= -->
-  <section class="das-sind-wir" id="das-sind-wir">
-    <div class="container dsw-grid">
-      <div class="dsw-photo reveal">
-        <span>Foto: Geschäftsführung</span>
-      </div>
-      <div class="dsw-content reveal">
-        <p class="section-eyebrow dsw-eyebrow">Die Köpfe hinter der FSR</p>
-        <h2 class="dsw-title">Das sind wir</h2>
-        <p>Seit 2012 leiten wir die Fußballschule Renchtal mit Herzblut und dem Ziel, jedem Kind echte
-          fußballerische und persönliche Entwicklung zu ermöglichen. Was als kleine Idee begann, ist heute
-          eine feste Größe im Renchtal.</p>
-        <p>Wir sind selbst fußballverrückt, kennen jedes Kind persönlich und begleiten seine Entwicklung mit
-          viel Geduld, Erfahrung und einem offenen Ohr. Für uns zählt nicht nur das Talent auf dem Platz,
-          sondern der Mensch dahinter.</p>
-        <a href="anmeldung.html" class="btn btn-blue btn-large">Kontakt aufnehmen</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CTA BAND ================= -->
-  <section class="cta-band" id="buchen">
-    <div class="container cta-inner reveal">
-      <h2>Bereit, besser zu werden?</h2>
-      <p>Vereinbare jetzt dein Erstgespräch und starte deine Entwicklung mit FSR.</p>
-      <a href="anmeldung.html" class="btn btn-blue btn-large">Jetzt starten</a>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer" id="kontakt">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="fsr-logo.png" alt="FSR Fußballschule Renchtal Logo" class="footer-logo">
-      <p>Fußballschule Renchtal – Fußball erleben, besser werden, Freunde finden.</p>
-    </div>
-
-    <div class="footer-col">
-      <h3>Kontakt</h3>
-      <ul>
-        <li><a href="tel:+491704707757">📞 0170&nbsp;470&nbsp;77&nbsp;57</a></li>
-        <li><a href="mailto:info@fussballschule-renchtal.com">✉️ info@fussballschule-renchtal.com</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Seiten</h3>
-      <ul>
-        <li><a href="#warum-fsr">Warum FSR</a></li>
-        <li><a href="#angebote">Angebote</a></li>
-        <li><a href="#camps">Camps</a></li>
-        <li><a href="#das-sind-wir">Das sind wir</a></li>
-        <li><a href="anmeldung.html">Anmeldung</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Rechtliches</h3>
-      <ul>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-        <li><a href="agb.html">AGB</a></li>
-      </ul>
+    <div class="wgrid">
+      <div class="wcard reveal"><span class="num">01</span><div class="ic">⚽</div><h3>Spaß & Leistung</h3><p>Bei uns wird gelacht und trainiert. Wer Freude hat, lernt schneller – und wird nebenbei richtig gut.</p></div>
+      <div class="wcard reveal"><span class="num">02</span><div class="ic">12</div><h3>Seit 2012</h3><p>Über zehn Jahre Erfahrung in der Talentförderung im Renchtal – wir wissen, worauf es ankommt.</p></div>
+      <div class="wcard reveal"><span class="num">03</span><div class="ic">★</div><h3>Lizenzierte Trainer</h3><p>Unser Team ist fußballverrückt und geschult – motivierend, kompetent, immer mit neuen Ideen.</p></div>
+      <div class="wcard reveal"><span class="num">04</span><div class="ic">✓</div><h3>Jeder wird entwickelt</h3><p>Egal auf welchem Level du startest: Du bekommst das Training, das dich wirklich weiterbringt.</p></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Fußballschule Renchtal. Alle Rechte vorbehalten.</p>
+</section>
+
+<section class="angebote" id="angebote">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="eyebrow">Unsere Angebote</p>
+      <h2>So trainierst du bei uns</h2>
+      <p>Drei Wege zu deiner Weiterentwicklung – vom actionreichen Feriencamp bis zur intensiven Einzelförderung.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ph"><span class="tag">Beliebt</span><span>Foto: Feriencamp</span></div>
+        <div class="cbody"><h3>Feriencamps</h3><p>3 Tage Fußball pur in den Ferien: Training, tägliche Turniere, Käfig-Action und jede Menge Spaß – inklusive Equipment und Verpflegung.</p><a href="anmeldung.html" class="btn btn-b">Zum Camp anmelden ›</a></div>
+      </div>
+      <div class="card reveal">
+        <div class="ph a"><span>Foto: Talent-Training</span></div>
+        <div class="cbody"><h3>Talent-Training</h3><p>Wöchentliche Förderung in der Gruppe: Dribbling, Finten, Beidfüßigkeit, Koordination und Taktik – Woche für Woche besser.</p><a href="anmeldung.html" class="btn btn-b">Jetzt anmelden ›</a></div>
+      </div>
+      <div class="card reveal">
+        <div class="ph b"><span>Foto: Individualtraining</span></div>
+        <div class="cbody"><h3>Individualtraining</h3><p>Maximale Intensität: Einzeltraining (1:1) oder Kleingruppe (max. 4 Kinder) – gezielt an deinen Stärken und Schwächen.</p><a href="anmeldung.html" class="btn btn-b">Anfragen ›</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wir">
+  <div class="wrap about">
+    <div class="aph reveal">Foto: Geschäftsführung</div>
+    <div class="reveal">
+      <p class="eyebrow">Die Köpfe hinter der FSR</p>
+      <h2>Das sind wir</h2>
+      <p>Seit 2012 leiten wir die Fußballschule Renchtal mit Herzblut. Wir sind selbst fußballverrückt und stehen bei jedem Camp und Training persönlich auf dem Platz.</p>
+      <p>Unser Anspruch: Jedes Kind wird bei uns gesehen, gefördert und geht mit einem Lächeln nach Hause – und mit sichtbaren Fortschritten am Ball.</p>
+      <a href="anmeldung.html" class="btn btn-b">Kontakt aufnehmen ›</a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Bereit, besser zu werden?</h2>
+    <p>Sichere dir jetzt deinen Platz – wir freuen uns auf dich!</p>
+    <a href="anmeldung.html" class="btn btn-b" style="font-size:1.15rem;padding:17px 36px">Jetzt anmelden ›</a>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="fsr-logo.png" alt="FSR Logo" onerror="this.style.display='none'">
+        <p>Seit 2012 entwickeln wir Fußballer im Renchtal – mit Spaß, lizenzierten Trainern und individueller Förderung für jeden.</p>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="tel:01704707757">0170 – 470 77 57</a></li>
+          <li><a href="mailto:info@fussballschule-renchtal.com">info@fussballschule-renchtal.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Seiten</h5>
+        <ul>
+          <li><a href="#warum">Warum FSR</a></li>
+          <li><a href="#angebote">Angebote</a></li>
+          <li><a href="anmeldung.html">Anmeldung</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 FSR Fußballschule Renchtal · Offizieller Partnerverein der TSG Akademie</span>
+      <nav>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script>
+const b=document.getElementById('bg'),m=document.getElementById('mm');
+b.addEventListener('click',()=>{b.classList.toggle('open');m.classList.toggle('show')});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.remove('open');m.classList.remove('show')}));
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
