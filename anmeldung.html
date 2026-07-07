@@ -98,6 +98,7 @@ footer a:hover{color:var(--yel)}
       <span>Ich akzeptiere die <a href="agb.html" target="_blank">AGB</a> und die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>. *</span>
     </div>
 
+    <div style="background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:20px;font-size:.9rem;color:var(--grey)"><b style="color:var(--ink)">💶 So läuft die Bezahlung:</b> Nach der Anmeldung erhältst du eine Bestätigung und eine <b style="color:var(--ink)">Rechnung per E-Mail</b>. Bezahlt wird per Überweisung – dein Platz ist mit Zahlungseingang fest reserviert.</div>
     <button class="btn" id="sub" type="submit">Anmeldung absenden</button>
     <div class="msg" id="out"></div>
   </form>
@@ -109,29 +110,37 @@ footer a:hover{color:var(--yel)}
 </footer>
 
 <script>
-const f=document.getElementById('f'),out=document.getElementById('out'),sub=document.getElementById('sub');
-f.addEventListener('submit',async e=>{
+// Angebots-Vorauswahl per URL (?angebot=...)
+const p=new URLSearchParams(location.search).get('angebot');
+if(p){const s=document.getElementById('angebot');[...s.options].forEach(o=>{if(o.text===p)s.value=o.text})}
+
+const f=document.getElementById('f'),out=document.getElementById('out');
+f.addEventListener('submit',function(e){
   e.preventDefault();
   out.className='msg';
   if(!f.checkValidity()){f.reportValidity();return}
-  sub.disabled=true;sub.textContent='Wird gesendet…';
-  const data=new FormData(f);
-  data.append('access_key','a92add17-c35f-4efa-8a17-ac4742223df3');
-  data.append('subject','Neue FSR-Anmeldung: '+data.get('Angebot'));
-  data.append('from_name','FSR Website Anmeldung');
-  try{
-    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:data});
-    const j=await r.json();
-    if(j.success){
-      out.textContent='Vielen Dank! Deine Anmeldung ist eingegangen – wir melden uns schnellstmöglich.';
-      out.className='msg ok';f.reset();
-    }else{throw 0}
-  }catch(_){
-    out.textContent='Ups, das hat nicht geklappt. Bitte versuche es erneut oder ruf uns an: 0170 – 470 77 57.';
-    out.className='msg err';
-  }
-  sub.disabled=false;sub.textContent='Anmeldung absenden';
+  // Daten einsammeln
+  const g=id=>document.getElementById(id).value.trim();
+  const angebot=g('angebot'),kind=g('kind'),geb=g('geb'),verein=g('verein')||'-',
+        eltern=g('eltern'),mail=g('mail'),tel=g('tel'),nachricht=g('msg')||'-';
+  const betreff='FSR-Anmeldung: '+angebot+' – '+kind;
+  const body=
+'Neue Anmeldung über die FSR-Website\n'+
+'----------------------------------------\n\n'+
+'Angebot: '+angebot+'\n'+
+'Name des Kindes: '+kind+'\n'+
+'Geburtsdatum: '+geb+'\n'+
+'Aktueller Verein: '+verein+'\n\n'+
+'Erziehungsberechtigte/r: '+eltern+'\n'+
+'E-Mail: '+mail+'\n'+
+'Telefon: '+tel+'\n\n'+
+'Nachricht: '+nachricht+'\n\n'+
+'----------------------------------------\n'+
+'Mit dem Absenden werden AGB und Datenschutzerklärung akzeptiert.';
+  const link='mailto:info@fussballschule-renchtal.com?subject='+encodeURIComponent(betreff)+'&body='+encodeURIComponent(body);
+  window.location.href=link;
+  out.textContent='Fast geschafft! Dein E-Mail-Programm öffnet sich mit der fertigen Anmeldung – bitte dort nur noch auf "Senden" tippen. Falls sich nichts öffnet, schreib uns direkt an info@fussballschule-renchtal.com.';
+  out.className='msg ok';
 });
 </script>
-</body>
-</html>
+</body></html>
